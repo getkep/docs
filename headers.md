@@ -13,7 +13,7 @@ Com isso, podemos definir qual domínio ou ip pode acessar a nossa API ou libera
     
 	header::allowOrigin( "http://kepphp.github.io" );
     
-	Route::post( "allUsers" , [ 'uses' => [ 'MyController@allUsers' ]);
+	Route::post("allUsers", ['uses' => ['MyController@allUsers']);
 
 ##Access control allow headers
 
@@ -21,7 +21,7 @@ Podemos adicionar mais informações a nossa header.
 	
 	use headers\header;
     
-	header::contentType( "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With" );
+	header::contentType("Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 ##Content type
 
@@ -29,4 +29,4 @@ Podemos definir os dados que a API pode receber. Confira em ação.
 
 	use headers\header;
     
-	header::contentType( "application/x-www-form-urlencoded, multipart/form-data, text/plain" );
+	header::contentType("application/x-www-form-urlencoded, multipart/form-data, text/plain");

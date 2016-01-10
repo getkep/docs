@@ -29,8 +29,8 @@ Para poder utilizar o model e a suas funções é preciso utilizar a depedencia 
     
     	private $load ;
     
-    	function __construct (){
-        	$this ->load = $this ->model( 'mymodel' );
+    	function __construct(){
+        	$this->load = $this ->model('mymodel');
     	}
     
 	}

@@ -28,8 +28,8 @@ Para podermos utilizar a nossa seed em nosso controller, precisamos fazer o load
     
      	private $seed ;
     
-     	function __construct (){
-         	$this ->seed = $this ->seeds( 'seeds' );
+     	function __construct(){
+         	$this->seed = $this->seeds('seeds');
      	}
     
 	}

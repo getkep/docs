@@ -15,8 +15,8 @@ Para configurar o sistema de autenticação é preciso alterar o seu arquivo de 
 
     'authentication' => [
         'mysql' => [
-            'activate' => true ,
-            'table' => 'Tabela' ,
-            'column' => 'Coluna' ,
+            'activate' => true,
+            'table' => 'Tabela',
+            'column' => 'Coluna',
         ],
     ],    

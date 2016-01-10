@@ -14,8 +14,8 @@ Vamos criar a nosso primeiro controller e conhecer a estrutura padrão de um Con
     
     	private $params ;
     	
-     	function __construct ( $parameters ){
-         	$this ->params = $parameters ;
+     	function __construct($parameters){
+         	$this->params = $parameters;
     	 }
     	
 	}
@@ -26,11 +26,11 @@ Para podermos obter os parâmetros recebidos atraves dos metodos Post, Get, Put 
 
 O retorno dos parâmetros vindo do metodo Post, Put e Delete é JSON, para utilizarmos, vejamos o exemplo:
 
-	$this ->params->number
+	$this->params->number
 
 Para o metodo Get, o Kep retorna um array, confira o exemplo:
 
-	$this ->params[ 'number' ];
+	$this->params['number'];
 
 ##Response
 
@@ -42,7 +42,7 @@ Retornamos os valores em formato JSON.
     	"mensagem" => "mensagem a retornar"
 	);
     
-	$this ->response( $array );
+	$this->response($array);
 
 O **Number** é o nome do parametro que espera receber e compartilhar pelo controller ou model.
 
@@ -54,23 +54,23 @@ Veja um exemplo de nossa Route utilizando a função getMulti() de nosso control
     
 	class MyController extends BaseController{
     
-    	private $params ;
+    	private $params;
     
-    	function __construct ( $parameters ){
-        	$this ->params = $parameters ;
+    	function __construct($parameters){
+        	$this->params = $parameters;
     	}
     
      	public function getMulti(){
-         	$Multiplication = 2 * $this ->params->number ;
+         	$Multiplication = 2 * $this->params->number;
         
-         	$this ->response( $Multiplication );
+         	$this->response($Multiplication);
      	}
     
 	}
 
 Para que possamos utilizar uma rota que use o nosso controller "MyController" e a função getMulti(), confira.
 
-	Route::post( 'getMulti' , [ 'uses' => 'MyController@getMulti' ]);
+	Route::post('getMulti', ['uses' => 'MyController@getMulti']);
 
 Para entender mais sobre Route, leia em [Routing](/#/docs/routing).
 

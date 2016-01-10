@@ -33,21 +33,21 @@ A estrutura do arquivo a seguir.
 	vendor/
 
 	return [
-     	'directory' => "v1" ,
+     	'directory' => "v1",
      	'connections' => [
          	'mysql' => [
-             	'driver' => 'mysqli' ,
-             	'host' => 'localhost' ,
-             	'database' => 'Data' ,
-             	'username' => 'root' ,
-             	'password' => 'password' ,
+             	'driver' => 'mysqli',
+             	'host' => 'localhost',
+             	'database' => 'Data',
+             	'username' => 'root',
+             	'password' => 'password',
          	],
      	],
      	'authentication' => [
          	'mysql' => [
-             	'activate' => true ,
-             	'table' => 'Tabela' ,
-             	'column' => 'Coluna' ,
+             	'activate' => true,
+             	'table' => 'Tabela',
+             	'column' => 'Coluna',
          	],
      	],
 	];
