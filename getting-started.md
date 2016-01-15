@@ -33,31 +33,31 @@ A estrutura do arquivo a seguir.
 	vendor/
 
 	class configuration
-  {
-    public function config()
     {
-      return [
-          'directory' => "v1",
-          'connections' => [
-              'mysql' => [
-                  'driver' => 'mysqli',
-                  'host' => 'localhost',
-                  'database' => 'Data',
-                  'username' => 'root',
-                  'password' => 'password',
-              ],
-          ],
-          'authentication' => [
-              'mysql' => [
-                  'activate' => true,
-                  'table' => 'Tabela',
-                  'column' => 'Coluna',
-              ],
-          ],
-      ];
+        public function config()
+        {
+            return [
+                'directory' => "v1",
+                'connections' => [
+                    'mysql' => [
+                        'driver' => 'mysqli',
+                        'host' => 'localhost',
+                        'database' => 'Data',
+                        'username' => 'root',
+                        'password' => 'password',
+                    ],
+                ],
+                'authentication' => [
+                    'mysql' => [
+                        'activate' => true,
+                        'table' => 'Tabela',
+                        'column' => 'Coluna',
+                    ],
+                ],
+            ];
+        }
     }
-  }
-
+    
 Você pode configurar o nome da pasta onde está localizado a API no 'directory'.
 
 ##Configuração Apache2
