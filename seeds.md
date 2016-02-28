@@ -13,9 +13,9 @@ O nome da classe de nossa seed, tem que ser iguais ao nome do arquivo sem a exte
 vejamos o exemplo de nossa primeira seed. Seeds.php
 
 	class Seeds{
-    
+
     	// Functions
-    
+
 	}
 
 ##Seed no controller
@@ -23,13 +23,17 @@ vejamos o exemplo de nossa primeira seed. Seeds.php
 Para podermos utilizar a nossa seed em nosso controller, precisamos fazer o load, confira como se faz no Kep.
 
 	use KepPHP\Kep\controller\BaseController;
-    
+
 	class NomeDoController extends BaseController{
-    
+
      	private $seed ;
-    
+
      	function __construct(){
          	$this->seed = $this->seeds('seeds');
      	}
-    
+
 	}
+
+Para melhor organizamos os nossos seeds em pastas, podemos chamar da seguinte forma.
+
+	$this->seed = $this->seeds('seeds', 'myseeds');
