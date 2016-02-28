@@ -9,12 +9,12 @@ PS: Para começar é preciso que tenha lido o [Getting Started](/#/docs).
 Para criarmos a nossa routing, utilizamos o arquivo index.php de acordo às [regras](/#/docs) da framework.
 
 	require_once("../vendor/autoload.php");
-    
+
 	use KepPHP\Kep\route\Route;
-    
+
 	/* Criando route com dependência do Controller */
 	Route::post("allUsers", ['uses' => ['MyController@allUsers']);
-    
+
 	/* Criando route sem dependência do Controller */
 	Route::post("Endpoint", function(){
     	// Tarefas para retorna
@@ -83,7 +83,7 @@ Com o grupo de routes, podemos determinar uri fixas para o inicio de chamadas à
 	Route::group('api/v1', function(){
      	// Rotas
 	});
-    
+
 	Route::group('api/v2', function(){
      	// Rotas
 	});
@@ -97,5 +97,11 @@ Observação: usado sem a dependencia do controller e com a dependencia no contr
 	$array = array(
      	"mensagem" => "mensagem a retornar"
 	);
-    
+
 	$this->response($array);
+
+##Organização
+
+Para organizamos mais os nossos controllers na pasta, podemos informar ao Kep, em qual pasta está localizada.
+
+	Route::post("login", ["uses" => "NomeDoController@FunctionAExecutar", "folder" => "authentication"]);
