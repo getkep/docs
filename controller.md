@@ -9,28 +9,24 @@ Para criarmos um controller é preciso seguir algumas regras basicas de nossa Fr
 Vamos criar a nosso primeiro controller e conhecer a estrutura padrão de um Controller Kep.
 
 	use KepPHP\Kep\controller\BaseController;
-    
+
 	class NomeDoController extends BaseController{
-    
+
     	private $params ;
-    	
+
      	function __construct($parameters){
          	$this->params = $parameters;
     	 }
-    	
+
 	}
 
 ##Parameters
 
 Para podermos obter os parâmetros recebidos atraves dos metodos Post, Get, Put e Delete, utilizamos o var $params.
 
-O retorno dos parâmetros vindo do metodo Post, Put e Delete é JSON, para utilizarmos, vejamos o exemplo:
+O retorno dos parâmetros vindo do metodo Post, Get, Put e Delete. Para utilizarmos, vejamos o exemplo:
 
 	$this->params->number
-
-Para o metodo Get, o Kep retorna um array, confira o exemplo:
-
-	$this->params['number'];
 
 ##Response
 
@@ -41,7 +37,7 @@ Retornamos os valores em formato JSON.
 	$array = array (
     	"mensagem" => "mensagem a retornar"
 	);
-    
+
 	$this->response($array);
 
 O **Number** é o nome do parametro que espera receber e compartilhar pelo controller ou model.
@@ -51,21 +47,21 @@ O **Number** é o nome do parametro que espera receber e compartilhar pelo contr
 Veja um exemplo de nossa Route utilizando a função getMulti() de nosso controller.
 
 	use KepPHP\Kep\controller\BaseController;
-    
+
 	class MyController extends BaseController{
-    
+
     	private $params;
-    
+
     	function __construct($parameters){
         	$this->params = $parameters;
     	}
-    
+
      	public function getMulti(){
          	$Multiplication = 2 * $this->params->number;
-        
+
          	$this->response($Multiplication);
      	}
-    
+
 	}
 
 Para que possamos utilizar uma rota que use o nosso controller "MyController" e a função getMulti(), confira.
