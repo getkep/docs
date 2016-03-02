@@ -39,13 +39,11 @@ A estrutura do arquivo a seguir.
             return [
                 'directory' => "v1",
                 'connections' => [
-                    'mysql' => [
-                        'driver' => 'mysqli',
-                        'host' => 'localhost',
-                        'database' => 'Data',
-                        'username' => 'root',
-                        'password' => 'password',
-                    ],
+                    'driver' => 'mysqli',
+                    'host' => 'localhost',
+                    'database' => 'Data',
+                    'username' => 'root',
+                    'password' => 'password',
                 ],
                 'authentication' => [
                     'mysql' => [
@@ -57,7 +55,7 @@ A estrutura do arquivo a seguir.
             ];
         }
     }
-    
+
 Você pode configurar o nome da pasta onde está localizado a API no 'directory'.
 
 ##Configuração Apache2
@@ -88,4 +86,3 @@ Utilizar o AngularJS como view para consumir a nossa API, veja alguns detalhes e
 ##Seeds
 
 Para criar as suas proprias classes e reutilizar de forma eficiente nos controllers, leia mais sobre [Seeds](/#/docs/seeds).
-
