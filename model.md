@@ -10,7 +10,6 @@ O Model é utilizado em junção com o [Controller](/#/docs/controller), é capa
 
 Vamos criar um model básica para servir o controller, iremos conhecer a estrutura do model do Kep.
 
-	use KepPHP\Kep\database\DB;
 	use KepPHP\Kep\model\BaseModel;
 
 	class mymodel extends BaseModel{
