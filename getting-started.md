@@ -8,9 +8,9 @@ Conta com sistemas de Rotas, Controles e modelos e a facilidade de conexão com 
 
 Instalação pelo composer, certifique-se de ter [Composer](https://getcomposer.org/) instalado em sua máquina.
 
-	composer require kepphp/kep v0.3.0
+	composer require getkep/kep v0.4.0
 
-Acompanhe as versões em nosso [repositório](https://github.com/KepPHP/Kep/releases) no Github e lembre sempre em instalar a última versão.
+Acompanhe as versões em nosso [repositório](https://github.com/getkep/Kep/releases) no Github e lembre sempre em instalar a última versão.
 
 ##Configuração
 

@@ -8,7 +8,7 @@ Para criarmos um controller é preciso seguir algumas regras basicas de nossa Fr
 
 Vamos criar a nosso primeiro controller e conhecer a estrutura padrão de um Controller Kep.
 
-	use KepPHP\Kep\controller\BaseController;
+	use GetKep\Kep\controller\BaseController;
 
 	class NomeDoController extends BaseController{
 
@@ -46,7 +46,7 @@ O **Number** é o nome do parametro que espera receber e compartilhar pelo contr
 
 Veja um exemplo de nossa Route utilizando a função getMulti() de nosso controller.
 
-	use KepPHP\Kep\controller\BaseController;
+	use GetKep\Kep\controller\BaseController;
 
 	class MyController extends BaseController{
 

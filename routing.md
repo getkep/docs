@@ -10,7 +10,7 @@ Para criarmos a nossa routing, utilizamos o arquivo index.php de acordo às [reg
 
 	require_once("../vendor/autoload.php");
 
-	use KepPHP\Kep\route\Route;
+	use GetKep\Kep\route\Route;
 
 	/* Criando route com dependência do Controller */
 	Route::post("allUsers", ['uses' => ['MyController@allUsers']);

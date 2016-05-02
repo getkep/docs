@@ -5,13 +5,10 @@ Para podermos melhorar a segurança de nossas APIs, utilizamos as Headers ao nos
 ##Access control allow origin
 
 Com isso, podemos definir qual domínio ou ip pode acessar a nossa API ou liberar com uso do "*".
+    
+    use GetKep\Kep\headers\header;
 
-	require_once ( "../kep/autoload.php" );
-    
-	use route\Route;
-	use headers\header;
-    
-	header::allowOrigin( "http://kepphp.github.io" );
+	header::allowOrigin( "http://getkep.com" );
     
 	Route::post("allUsers", ['uses' => ['MyController@allUsers']);
 
@@ -19,7 +16,7 @@ Com isso, podemos definir qual domínio ou ip pode acessar a nossa API ou libera
 
 Podemos adicionar mais informações a nossa header.
 	
-	use headers\header;
+	use GetKep\Kep\headers\header;
     
 	header::contentType("Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
@@ -27,6 +24,6 @@ Podemos adicionar mais informações a nossa header.
 
 Podemos definir os dados que a API pode receber. Confira em ação.
 
-	use headers\header;
+	use GetKep\Kep\headers\header;
     
 	header::contentType("application/x-www-form-urlencoded, multipart/form-data, text/plain");

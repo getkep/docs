@@ -22,7 +22,7 @@ vejamos o exemplo de nossa primeira seed. Seeds.php
 
 Para podermos utilizar a nossa seed em nosso controller, precisamos fazer o load, confira como se faz no Kep.
 
-	use KepPHP\Kep\controller\BaseController;
+	use GetKep\Kep\controller\BaseController;
 
 	class NomeDoController extends BaseController{
 
