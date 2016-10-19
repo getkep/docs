@@ -6,66 +6,30 @@ Conta com sistemas de Rotas, Controles e modelos e a facilidade de conexão com 
 
 ##Instalação
 
-Instalação pelo composer, certifique-se de ter [Composer](https://getcomposer.org/) instalado em sua máquina.
+Primeiro, faça o download do Kep Installer usando o [Composer](https://getcomposer.org/):
 
-	composer require getkep/kep v0.4.0
+	composer global require "getkep/installer"
 
-Acompanhe as versões em nosso [repositório](https://github.com/getkep/Kep/releases) no Github e lembre sempre em instalar a última versão.
+Certifique-se de colocar o diretório `$HOME/.composer/vendor/bin` (Ou o diretório que foi instalado em seu OS) no seu `$PATH` para o executável do `kep`.
+
+Quando instalado, o novo comando `kep new` irá criar uma instalação do Kep fresquinha no diretório que você especificar. Exemplo, `kep new api` vai criar um diretório chamado api, contendo uma instalação fresquinha, com todas as dependências do Kep instaladas:
+
+    kep new api 
 
 ##Configuração
 
-Depois da instalação do Kep com composer em uma pasta, precisamos criar uma nova pasta com qualquer nome(Certifique-se de adicionar este nome na configuração do Kep).
+### Apache
 
-Abra a pasta e crie mais 3, com os nomes controllers, models e seeds. a arquitetura de nossa aplicação fica assim:
-
-	api/
-       ├─ v1/
-       │    ├─ controllers/
-       │    ├─ models/
-       │    └─ seeds/
-       └─ vendor/
-
-Para o Kep, identificar a pasta e efetuar conexão com o banco de dados, precisamos criar o arquivo de configuração na pasta raiz do projeto (Antes da pasta vendor), com o nome config.php.
-
-A estrutura do arquivo a seguir.
-
-	config.php
-	vendor/
-
-	class configuration
-    {
-        public function config()
-        {
-            return [
-                'directory' => "v1",
-                'connections' => [
-                    'driver' => 'mysqli',
-                    'host' => 'localhost',
-                    'database' => 'Data',
-                    'username' => 'root',
-                    'password' => 'password',
-                ],
-                'authentication' => [
-                    'mysql' => [
-                        'activate' => true,
-                        'table' => 'Tabela',
-                        'column' => 'Coluna',
-                    ],
-                ],
-            ];
-        }
-    }
-
-Você pode configurar o nome da pasta onde está localizado a API no 'directory'.
-
-##Configuração Apache2
-
-Para o funcionamento correto da API em um servidor Apache2, precisamos criar urls amigaveis e deixar o Kep cuidar do assunto.
+Para o funcionamento correto da API em um servidor Apache, precisamos criar urls amigaveis e deixar o Kep cuidar do assunto.
 
 	RewriteEngine On
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteRule .index.php [L]
+
+### Configuração de arquivos
+
+Fique a vontade para poder renomear o diretório do Kep, de `v1` para outra informação correspondente a sua API, fique ciente de alterar no arquivo `config.php` o nome do diretório.
 
 ##Routes
 
